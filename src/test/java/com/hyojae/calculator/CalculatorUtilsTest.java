@@ -16,4 +16,12 @@ class CalculatorUtilsTest {
 		assertThat(numbers.size()).isEqualTo(4);
 		assertThat(numbers).isEqualTo(Arrays.asList(10, 2, 3, 132));
 	}
+
+	@Test
+	void 연산자들을_추출한다() {
+		List<Character> operators = CalculatorUtils.extractOperators("10 / 2 + 3 + 132");
+
+		assertThat(operators.size()).isEqualTo(3);
+		assertThat(operators).isEqualTo(Arrays.asList('/', '+', '+'));
+	}
 }
