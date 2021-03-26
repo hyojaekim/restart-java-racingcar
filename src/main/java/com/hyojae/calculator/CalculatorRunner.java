@@ -16,8 +16,9 @@ public class CalculatorRunner {
 		double result = numbers.get(0);
 
 		for (int i = 0; i < operators.size(); i++) {
+			char operator = operators.get(i);
 			int nextNumber = numbers.get(i + 1);
-			result = Calculator.calculate(result, operators.get(i), nextNumber);
+			result = Calculator.calculate(result, operator, nextNumber);
 		}
 		return result;
 	}
